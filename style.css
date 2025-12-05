@@ -1,0 +1,36 @@
+:root { font-family: Inter, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #0b1020; color: #e8ecf1; }
+.container { max-width: 900px; margin: 40px auto; padding: 0 16px; }
+
+h1 { margin: 0 0 20px; font-size: 28px; }
+h2 { margin: 22px 0 10px; font-size: 20px; }
+
+.card { background: #121a33; border: 1px solid #243057; border-radius: 16px; padding: 16px; }
+.row { display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: center; margin-bottom: 12px; }
+.row-actions { grid-template-columns: 1fr 1fr 1fr; margin-top: 6px; }
+
+label { color: #cfe1ff; }
+input, textarea { width: 100%; background: #0e1530; color: #e8ecf1; border: 1px solid #243057; border-radius: 10px; padding: 10px; }
+textarea { min-height: 90px; resize: vertical; }
+
+button { background: #3b82f6; color: #fff; border: 0; border-radius: 12px; padding: 10px 14px; cursor: pointer; font-weight: 600; }
+button.secondary { background: #64748b; }
+button.ghost { background: transparent; border: 1px solid #334155; color: #cbd5e1; }
+button:hover { filter: brightness(1.06); }
+
+.grid-wrap { margin-top: 18px; }
+.grid { display: inline-grid; grid-template-columns: repeat(5, 52px); gap: 0; border: 1px solid #243057; border-radius: 10px; overflow: hidden; }
+.cell { width: 52px; height: 52px; display: grid; place-items: center; border-right: 1px solid #243057; border-bottom: 1px solid #243057; font-weight: 700; letter-spacing: 1px; }
+.cell:nth-child(5n) { border-right: none; }
+.cell:nth-last-child(-n + 5) { border-bottom: none; }
+
+.note { color: #9aa6b2; margin-top: 6px; }
+
+.pairs { display: flex; flex-wrap: wrap; gap: 8px; min-height: 40px; padding: 6px 0; }
+.pair { background: #243057; padding: 4px 8px; border-radius: 8px; font-weight: 700; letter-spacing: 1px; }
+.muted { color: #9aa6b2; }
+
+.output { background: #0e1530; padding: 12px 14px; border: 1px solid #243057; border-radius: 10px; min-height: 44px; font-size: 18px; letter-spacing: 2px; }
+
+footer { margin: 26px 0 40px; color: #93a1b3; }

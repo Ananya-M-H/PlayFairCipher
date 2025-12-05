@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Playfair Cipher — Vanilla JS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Playfair Cipher</h1>
+
+    <section class="card">
+      <div class="row">
+        <label for="keyword">Keyword</label>
+        <input id="keyword" type="text" placeholder="e.g., MONARCHY" value="MONARCHY" />
+      </div>
+
+      <div class="row">
+        <label for="inputText">Text</label>
+        <textarea id="inputText" placeholder="Enter plaintext (for Encrypt) or ciphertext (for Decrypt)">HELLO WORLD</textarea>
+      </div>
+
+      <div class="row row-actions">
+        <button id="btnEncrypt">Encrypt</button>
+        <button id="btnDecrypt" class="secondary">Decrypt</button>
+        <button id="btnClear" class="ghost">Clear</button>
+      </div>
+    </section>
+
+    <section class="grid-wrap">
+      <h2>Key Matrix</h2>
+      <div id="matrix" class="grid"></div>
+      <p class="note">I and J are merged.</p>
+    </section>
+
+    <section>
+      <h2>Preprocessed Pairs</h2>
+      <div id="pairs" class="pairs muted">Run an action to see digraphs…</div>
+    </section>
+
+    <section>
+      <h2>Result</h2>
+      <div id="result" class="output">—</div>
+    </section>
+
+    <footer>
+      <small>
+        Rules: Same row → shift right (encrypt) / left (decrypt). Same column → shift down (encrypt) / up (decrypt). Rectangle → take opposite corners.
+      </small>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
